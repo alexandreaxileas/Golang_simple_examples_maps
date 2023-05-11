@@ -17,8 +17,7 @@ func main() {
 		"C": {"Carlos": 4860.77,
 			"Carina": 7202.14}}
 
-	//fmt.Println(funcMApPorLetra["B"]["Benedito"]) //fmt.Println("-------------")
-
+	//fmt.Println(funcMApPorLetra["B"]["Benedito"])
 	fmt.Println("-------------")
 	fmt.Println("-------------")
 	// Atribuindo um Slice para cada letra do Map
@@ -29,14 +28,15 @@ func main() {
 			s = append(s, key)
 		}
 	}
-
+	// Ordena o Slice
 	sort.Strings(s)
 	//fmt.Println(sort.SearchStrings(s, "C"))
 	fmt.Println("-------------")
 	fmt.Println("-------------")
-	fmt.Println(strings.Join(s, "-"))
+	fmt.Println(strings.Join(s, "-")) // Concatenar
 	fmt.Println("-------------")
 	fmt.Println("-------------")
+	//
 	keys := make([]string, 0, len(funcMApPorLetra)) // criou um slice
 	for k := range funcMApPorLetra {
 		keys = append(keys, k)
